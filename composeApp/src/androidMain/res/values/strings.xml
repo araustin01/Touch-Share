@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TouchShare</string>
+    <string name="servicedesc">My HCE Service Description</string>
+    <string name="aiddescription">My AID Group Description</string>
 </resources>

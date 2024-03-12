@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.activity_main)
         
         // Initialize NFC adapter
-        nfcAdapter = NfcAdapter.getDefaultAdapter(this)
+        /*nfcAdapter = NfcAdapter.getDefaultAdapter(this)
         if(nfcAdapter == null) {
             Toast.makeText(this, "NFC is not available", Toast.LENGTH_LONG).show()
             finish()
@@ -36,11 +36,11 @@ class MainActivity : ComponentActivity() {
             this, 0,
             Intent(this, javaClass).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), PendingIntent.FLAG_IMMUTABLE
         )
-
+        */
         // Set click listener for send button
-        findViewById<Button>(R.id.sendBtn).setOnClickListener {
+            findViewById<Button>(R.id.sendBtn).setOnClickListener {
             // Check if NFC is available
-            nfcAdapter?.let { adapter ->
+            /*nfcAdapter?.let { adapter ->
                 if (adapter.isEnabled) {
                     // Create NDEF message
                     val message = NdefMessage(
@@ -51,13 +51,7 @@ class MainActivity : ComponentActivity() {
                 } else {
                     Toast.makeText(this, "NFC is not available", Toast.LENGTH_SHORT).show()
                 }
-            }
+            }*/
         }
     }
-}
-
-@Preview
-@Composable
-fun AppAndroidPreview() {
-    App()
 }
